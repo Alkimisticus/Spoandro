@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Spoandro</string>
+
+    <string name="basketball_button">Basketball</string>
+    <string name="football_button">Football</string>
+    <string name="tennis_button">Tenis</string>
+
+    <string name="set_result_label">Set score</string>
+    <string name="send_button">Send</string>
+
+
+</resources>

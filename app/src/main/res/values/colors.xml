@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_football">#4cbf60</color>
+    <color name="color_football_dark">#3b944a</color>
+
+    <color name="color_basketball">#f26f55</color>
+    <color name="color_basketball_dark">#bb5642</color>
+
+    <color name="color_tennis">#4caad9</color>
+    <color name="color_tennis_dark">#3b83a8</color>
+
+    <color name="color_button_selected">#fffbe5</color>
+    <color name="color_button_text">#fffbe5</color>
+
+    <color name="color_set_score_background">#fffbe5</color>
+    <color name="color_set_score_text">#010101</color>
+
+    <!-- Edit text cursor color -->
+    <color name="colorAccent">#010101</color>
+
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    android:background="@color/color_set_score_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/BasketballCourtButton"
+            android:text="@string/basketball_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="basketball1"
+            android:onClick="changeCourt"
+            android:textColor="@color/color_button_text"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/selector_basketball_button"
+            />
+
+        <Button
+            android:id="@+id/FootballCourtButton"
+            android:text="@string/football_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="football1"
+            android:onClick="changeCourt"
+            android:textColor="@color/color_button_text"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/selector_football_button"
+            />
+
+        <Button
+            android:id="@+id/TennisCourtButton"
+            android:text="@string/tennis_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="tennis1"
+            android:onClick="changeCourt"
+            android:textColor="@color/color_button_text"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/selector_tennis_button"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/courts"
+        android:layout_below="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <si.klika.spoandro.courts.BasketballCourt
+            android:visibility="gone"
+            android:id="@+id/courtBasketball"
+            android:background="@color/color_basketball"
+            android:src="@drawable/basketball_court"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            />
+
+        <si.klika.spoandro.courts.FootballCourt
+            android:visibility="gone"
+            android:id="@+id/courtFootball"
+            android:background="@color/color_football"
+            android:src="@drawable/football_court"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            />
+
+        <si.klika.spoandro.courts.TennisCourt
+            android:visibility="gone"
+            android:id="@+id/courtTennis"
+            android:background="@color/color_tennis"
+            android:src="@drawable/tennis_court"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="match_parent"
+            />
+
+        <ImageView
+            android:id="@+id/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="top"
+            android:src="@drawable/buttons_shadow" />
+
+    </FrameLayout>
+
+
+
+    <TextView
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_result_label"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:id="@+id/label"
+        android:textStyle="bold"
+        android:textColor="@color/color_set_score_text"
+        android:layout_below="@+id/courts"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/label"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp">
+
+        <EditText
+            android:id="@+id/homeScore"
+            android:inputType="number"
+            android:text="0"
+            android:gravity="center"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:layout_weight="1"
+            android:textSize="130sp"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:textColor="@color/color_set_score_text"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text=":"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="130sp"
+            android:textColor="@color/color_set_score_text"
+            android:layout_marginBottom="50dp"/>
+
+        <EditText
+            android:id="@+id/guestScore"
+            android:inputType="number"
+            android:text="0"
+            android:gravity="center"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:layout_weight="1"
+            android:textSize="130sp"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:textColor="@color/color_set_score_text"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sendButton"
+        android:text="@string/send_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:onClick="setScore"
+        />
+
+</RelativeLayout>
