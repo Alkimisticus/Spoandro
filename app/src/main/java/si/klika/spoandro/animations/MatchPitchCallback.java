@@ -1,4 +1,4 @@
-package si.klika.spoandro.courts;
+package si.klika.spoandro.animations;
 
 public interface MatchPitchCallback {
 

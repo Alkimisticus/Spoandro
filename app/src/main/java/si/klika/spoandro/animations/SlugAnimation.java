@@ -1,4 +1,4 @@
-package si.klika.spoandro.courts;
+package si.klika.spoandro.animations;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -18,7 +18,7 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class FootballCourt extends ImageView implements MatchPitchCallback {
+public class SlugAnimation extends ImageView implements MatchPitchCallback {
 
     private int viewWidth;
     private int viewHeight;
@@ -50,16 +50,16 @@ public class FootballCourt extends ImageView implements MatchPitchCallback {
 
     private AnimatorSet animatorSet;
 
-    public FootballCourt(Context context) {
+    public SlugAnimation(Context context) {
         super(context);
         throw new UnsupportedOperationException("This view was only ment to be constructed from XML layout");
     }
 
-    public FootballCourt(Context context, AttributeSet attrs) {
+    public SlugAnimation(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public FootballCourt(Context context, AttributeSet attrs, int defStyle) {
+    public SlugAnimation(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
         viewPaint = new Paint(Paint.ANTI_ALIAS_FLAG);

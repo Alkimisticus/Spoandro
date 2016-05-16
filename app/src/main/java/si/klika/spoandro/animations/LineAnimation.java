@@ -1,4 +1,4 @@
-package si.klika.spoandro.courts;
+package si.klika.spoandro.animations;
 
 import android.animation.AnimatorSet;
 import android.animation.PropertyValuesHolder;
@@ -13,7 +13,7 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-public class BasketballCourt extends ImageView implements MatchPitchCallback {
+public class LineAnimation extends ImageView implements MatchPitchCallback {
 
     private int viewWidth;
     private int viewHeight;
@@ -36,16 +36,16 @@ public class BasketballCourt extends ImageView implements MatchPitchCallback {
 
     private AnimatorSet animatorSet;
 
-    public BasketballCourt(Context context) {
+    public LineAnimation(Context context) {
         super(context);
         throw new UnsupportedOperationException("This view was only ment to be constructed from XML layout");
     }
 
-    public BasketballCourt(Context context, AttributeSet attrs) {
+    public LineAnimation(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public BasketballCourt(Context context, AttributeSet attrs, int defStyle) {
+    public LineAnimation(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
 
         viewPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
